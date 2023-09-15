@@ -1,0 +1,158 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Style the header and navigation */
+header {
+    background-color: #3498db; /* Blue */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Style the search bar and cart */
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #555; /* Dark Gray */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e74c3c; /* Red */
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+/* Style the main content section */
+.main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.category h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.category ul {
+    list-style: none;
+}
+
+/* Apply different background colors to category links */
+.category ul li:nth-child(odd) {
+    background-color: #27ae60; /* Green */
+}
+
+.category ul li:nth-child(even) {
+    background-color: #f1c40f; /* Yellow */
+}
+
+/* Style the category links and change their color to orange */
+.category ul li a {
+    color: #e67e22; /* Orange */
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.category ul li a:hover {
+    background-color: #e67e22; /* Orange on hover */
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    margin-right: 10px;
+}

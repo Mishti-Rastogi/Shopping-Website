@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressive Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        footer {
+            position: relative;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">YourLogo</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="electronics.html"><img src="sw1.png" alt="Electronics"></a></li>
+                <li><a href="clothing.html"><img src="sw2.png" alt="Clothing"></a></li>
+                <li><a href="stationary.html"><img src="sw3.png" alt="Stationary"></a></li>
+                <li><a href="toys.html"><img src="sw4.png" alt="Toys & Games"></a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." id="search-input">
+                <button id="search-button">Search</button>
+            </div>
+            <div class="cart">
+                <a href="#"><img src="cart-icon.png" alt="Cart"></a>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-card">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p class="price">$19.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Repeat product cards for other featured products -->
+        </section>
+
+        <section class="categories">
+            <h2>Categories</h2>
+            <ul>
+                <!-- Icons and data-category attributes for each category -->
+                <li><a href="javascript:void(0);" data-category="electronics"><img src="sw1.png" alt="Electronics"></a></li>
+                <li><a href="javascript:void(0);" data-category="clothing"><img src="sw2.png" alt="Clothing"></a></li>
+                <li><a href="javascript:void(0);" data-category="stationary"><img src="sw3.png" alt="Stationary"></a></li>
+                <li><a href="javascript:void(0);" data-category="toys"><img src="sw4.png" alt="Toys & Games"></a></li>
+            </ul>
+        </section>
+
+        <section class="categories">
+            <h2>Categories</h2>
+            <ul>
+                <!-- Icons and data-category attributes for each category (same as before) -->
+                <!-- Links will now directly navigate to respective HTML pages -->
+                <li><a href="electronics.html" data-category="electronics"><img src="sw1.png" alt="Electronics"></a></li>
+                <li><a href="clothing.html" data-category="clothing"><img src="sw2.png" alt="Clothing"></a></li>
+                <li><a href="stationary.html" data-category="stationary"><img src="sw3.png" alt="Stationary"></a></li>
+                <li><a href="toys.html" data-category="toys"><img src="sw4.png" alt="Toys & Games"></a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">YourLogo</div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to handle category redirection (same as before)
+        const categoryIcons = document.querySelectorAll('.categories a');
+
+        categoryIcons.forEach((icon) => {
+            icon.addEventListener('click', (event) => {
+                event.preventDefault();
+                const category = icon.getAttribute('data-category');
+                window.location.href = `${category}.html`;
+            });
+        });
+    </script>
+</body>
+</html>
